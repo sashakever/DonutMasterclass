@@ -1,0 +1,72 @@
+//====================================================================================================
+.page__contant-main {
+}
+.contant-main {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $md4+px) {
+            align-items: center;
+        }
+    }
+
+    //margin-top: 57px;
+    margin-bottom: 120px;
+    @media (max-width: $md4+px) {
+        margin-top: 33px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-family: "Caveat Brush";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 65px;
+        color: $mainColor;
+        margin-bottom: 15px;
+        @media (max-width: $md4+px) {
+            margin-bottom: 3px;
+            text-align: center;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 30px;
+            line-height: 38px;
+        }
+    }
+    &__by {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $mainColor;
+        margin-bottom: 30px;
+        @media (max-width: $md4+px) {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__register {
+        @media (max-width: $md4+px) {
+            margin-bottom: 45px;
+            //margin-right: 0;
+        }
+        margin-bottom: 65px;
+    }
+}
+
+.social {
+    &_left {
+        @media (max-width: $md4+px) {
+            justify-content: left;
+        }
+    }
+}
+.social__items {
+}
+.social-item {
+}
+//====================================================================================================
