@@ -22,6 +22,7 @@
 .header__menu {
 }
 .menu {
+	z-index: 4;
 	@media (min-width: $md4+px) {
 		flex: 1 1 auto;
 	}

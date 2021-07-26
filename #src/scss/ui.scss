@@ -120,8 +120,10 @@
 		@media (max-width: $md2+px) {
 			visibility: hidden;
 		}
+		//z-index: -1;
 	}
 	&__image2 {
+		//z-index: -1;
 		position: absolute;
 		top: 0px;
 		//left: 770px;

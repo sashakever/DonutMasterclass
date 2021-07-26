@@ -1164,6 +1164,7 @@ body.ie ._ibg img {
 }
 
 .menu {
+  z-index: 4;
   margin-left: 25px;
   height: 100%;
 }
