@@ -61,6 +61,56 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
+if (document.querySelector('.slider-reviews__body')) {
+	new Swiper('.slider-reviews__body', {
+		observer: false,//true,
+		observeParents: false,//true,
+		slidesPerView: 3,
+		slidesPerView: 'auto',//ширина слайда из стилей
+		spaceBetween: 60,
+		speed: 800,
+		loop: true,
+		watchOverflow: false,//true,
+		loopAdditionalSlides: 1,
+		preloadImages: false,
+		parallax: true,
+		centeredSlides: true,
+		// Dotts
+		pagination: {
+			el: '.slider-arrows__slide-number',
+			type: 'fraction',
+			//clickable: false,
+		},
+		
+		// Arrows
+		navigation: {
+			nextEl: '.slider-reviews .slider-arrow_next',
+			prevEl: '.slider-reviews .slider-arrow_prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				//spaceBetween: 51
+			},
+			// when window width is >= 320px
+			480: {
+				slidesPerView: 3,
+				spaceBetween: 51
+			},
+			// when window width is >= 768px
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 60
+			},
+			// when window width is >= 992px
+			992: {
+				//slidesPerView: 3,
+				//spaceBetween: 32
+			}
+		}
+	});
+}
+
 let slider_about = new Swiper('.about__slider', {
 	/*
 	effect: 'fade',

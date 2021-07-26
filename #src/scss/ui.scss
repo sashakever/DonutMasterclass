@@ -1,4 +1,171 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+//rating
+
+.rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: 40px;
+	line-height: 0.75;
+	transition: opacity 0.3s ease 0s;
+}
+.rating.rating_sending {
+	opacity: 0.2;
+}
+.rating.rating_set .rating__active,
+.rating.rating_set .rating__item {
+	cursor: pointer;
+}
+
+.rating__body {
+	position: relative;
+}
+.rating__body::before {
+	content: "★★★★★";
+	display: block;
+}
+.rating__active {
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.rating__active::before {
+	content: "★★★★★";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #ab816c;
+}
+
+.rating__items {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.rating__item {
+	flex: 0 0 20%;
+	height: 100%;
+	opacity: 0;
+}
+.rating__value {
+	font-size: 50%;
+	line-height: 1;
+	padding: 0px 0px 0px 10px;
+	display: none;
+}
+
+//rating-end
+.input-common {
+	border-bottom: 1px solid #ab816c;
+	width: 100%;
+	height: 20px;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(171, 129, 108, 0.5);
+}
+
+.text {
+	p,
+	li {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 22px;
+		color: $mainColor;
+		margin-bottom: 20px;
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.title {
+	font-family: "Caveat Brush";
+	font-style: normal;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 65px;
+	//text-align: left;
+	color: $mainColor;
+
+	@media (max-width: $md3+px) {
+		font-size: 24px;
+		line-height: 65px;
+	}
+}
+
+.bg-img {
+	&__images {
+	}
+	&__image1 {
+		position: absolute;
+		top: 166px;
+		left: 0;
+		height: 210px;
+		img {
+			height: 100%;
+		}
+		@media (max-width: $md2+px) {
+			visibility: hidden;
+		}
+	}
+	&__image2 {
+		position: absolute;
+		top: 0px;
+		//left: 770px;
+		@media (max-width: $md4+px) {
+			top: -70px;
+			left: -60px;
+			img {
+				height: 200px;
+			}
+		}
+		@media (min-width: $md4+px) and (max-width: 670px) {
+			right: 50px;
+			img {
+				height: 250px;
+			}
+		}
+		@media (min-width: $md4+px) {
+			right: 100px;
+			img {
+				height: 400px;
+			}
+		}
+		@media (min-width: $md3+px) {
+			right: -190px;
+			img {
+				height: 550px;
+			}
+		}
+		@media (min-width: $md2+px) {
+			right: -40px;
+			img {
+				height: 550px;
+			}
+		}
+
+		//width: 60%;
+		//height: 660px;
+		@include adaptiv-value("height", 660, 100, 1);
+		img {
+			//height: 550px;
+		}
+	}
+}
+
 .buttons {
 	background: $bgElement;
 	border-radius: 25px;

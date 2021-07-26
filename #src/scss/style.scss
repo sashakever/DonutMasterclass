@@ -49,7 +49,15 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
+	position: relative;
 	background-color: $mainBg;
+	background: url("../img/WheatFlour.png") 100% 100%/200px 130px no-repeat,
+		url("../img/bg1.svg") 0 0/100% auto no-repeat, url("../img/bg2.svg") 0px 1650px/100% auto no-repeat;
+	@media (max-width: 670px) {
+		background: url("../img/WheatFlour.png") 100% 100%/100px 60px no-repeat,
+			url("../img/bg1.svg") 0 0/100% auto no-repeat, url("../img/bg2.svg") 0px 1650px/100% auto no-repeat;
+	}
+	//background: ;
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
